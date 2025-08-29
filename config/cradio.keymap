@@ -30,6 +30,55 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        combo_bs{
+            timeout-ms = <50>;
+            key-positions = <15 16>;
+            bindings = <&kp BSPC>;
+        }
+        combo_del{
+            timeout-ms = <50>;
+            key-positions = <17 16>;
+            bindings = <&kp DEL>;
+        }
+        combo_del{
+            timeout-ms = <50>;
+            key-positions = <19 29>;
+            bindings = <&kp DEL>;
+        }
+
+
+        combo_tab{
+            timeout-ms = <50>;
+            key-positions = <13 14>;
+            bindings = <&kp TAB>;
+        }
+
+        combo_lpar{
+            timeout-ms = <50>;
+            key-positions = <6 16>;
+            bindings = <&kp LPAR>;
+        }
+        combo_rpar{
+            timeout-ms = <50>;
+            key-positions = <7 17>;
+            bindings = <&kp RPAR>;
+        }
+
+        combo_lbkt{
+            timeout-ms = <50>;
+            key-positions = <16 26>;
+            bindings = <&kp LBKT>;
+        }
+        combo_rbkt{
+            timeout-ms = <50>;
+            key-positions = <17 27>;
+            bindings = <&kp RB>;
+        }
+    }
+
     keymap {
         compatible = "zmk,keymap";
         default_layer {
@@ -44,7 +93,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &lt 2 TAB   &kp ENTER     &kp SPACE  &lt 1 BSPC
+                                            &lt 1 LGUI  &mo 1         &kp SPACE  &mt BSPC RCTRL
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -52,16 +101,16 @@
         right_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ INSERT   │  1       │  2       │  3       │          │   │ HOME     │ PAGE DN  │ PAGE UP  │ END      │  :       │
-            &kp INS    &kp N1     &kp N2     &kp N3     &trans         &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp COLON
+        //│ `        │  7       │  8       │  9       │          │   │ HOME     │ PAGE DN  │ PAGE UP  │ END      │  :       │
+            &kp GRAVE  &kp N7     &kp N8     &kp N9     &trans         &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp COLON
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ DELETE   │  4       │  5       │  6       │          │   │ LEFT     │ DOWN     │ UP       │ RIGHT    │  ;       │
-            &kp DEL    &kp N4     &kp N5     &kp N6     &trans         &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT   &kp SEMI
+        //│ DELETE   │  4       │  5       │  6       │  ;       │   │ LEFT     │ DOWN     │ UP       │ RIGHT    │  ;       │
+            &kp DEL    &kp N4     &kp N5     &kp N6     &kp SEMI       &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT   &kp SEMI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ CAPS     │  7       │  8       │  9       │  0       │   │          │          │          │          │          │
-           &caps_word  &kp N7     &kp N8     &kp N9     &kp N0         &trans     &trans     &trans     &trans     &trans
+        //│ CAPS     │  1       │  2       │  3       │  '       │   │          │          │          │          │          │
+           &kp N0     &kp N1     &kp N2     &kp N3     &kp   SQT       &trans     &trans     &trans     &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &kp ESC        &trans     &trans
+                                             &trans     &kp ESC        &mo 2     &kp RSHFT
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -69,14 +118,14 @@
         left_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │  [       │  {       │  }       │          │   │  ^       │  (       │  )       │  ]       │  ~       │
-            &trans     &kp LBKT   &kp LBRC   &kp RBRC   &trans         &kp CARET  &kp LPAR   &kp RPAR   &kp RBKT   &kp TILDE
+        //│          │          │          │          │          │   │   bt 1   │  bt 2    │  bt 3    │          │          │
+            &kp F1     &kp F2     &kp F3     &kp F4      &trans      &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3  &kp RBKT  &bt BT_CLR
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  !       │  @       │  #       │  $       │  %       │   │  *       │  -       │  =       │  \       │  `       │
-            &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT      &kp ASTRK  &kp MINUS  &kp EQUAL  &kp BSLH   &kp GRAVE
+        //│          │          │          │          │          │   │  prev    |  vol up  │ vol down │  next     play/pause 
+            &kp F5     &kp F6     &kp F7     &kp F8      &trans      &kp K_PREV  &kp K_VOL_UP &kp K_VOL_DN &kp K_NEXT   &kp K_PP
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │  &       │  _       │  +       │  │       │          │
-            &trans     &trans     &trans     &trans     &trans         &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE   &trans
+            &kp F9     &kp F10    &kp F11   &kp F12     &trans         &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE   &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
