@@ -43,10 +43,10 @@
             key-positions = <17 16>;
             bindings = <&kp DEL>;
         };
-        combo_del2 {
+        combo_esc {
             timeout-ms = <50>;
             key-positions = <19 29>;
-            bindings = <&kp DEL>;
+            bindings = <&kp ESC>;
         };
 
         combo_tab {
@@ -118,7 +118,7 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │          │          │          │          │   │   bt 1   │  bt 2    │  bt 3    │          │          │
-            &kp F1     &kp F2     &kp F3     &kp F4      &trans      &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3  &kp RBKT  &bt BT_CLR
+            &kp F1     &kp F2     &kp F3     &kp F4      &trans      &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2  &kp RBKT  &bt BT_CLR
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │  prev    │  vol up  │ vol down │  next     play/pause 
             &kp F5     &kp F6     &kp F7     &kp F8      &trans      &kp K_PREV  &kp K_VOL_UP &kp K_VOL_DN &kp K_NEXT   &kp K_PP
