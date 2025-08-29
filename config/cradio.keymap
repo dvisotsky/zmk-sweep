@@ -76,7 +76,7 @@
             key-positions = <17 27>;
             bindings = <&kp RBKT>;
         };
-    }
+    };
 
     keymap {
         compatible = "zmk,keymap";
