@@ -33,50 +33,49 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_bs{
+        combo_bs {
             timeout-ms = <50>;
             key-positions = <15 16>;
             bindings = <&kp BSPC>;
-        }
-        combo_del{
+        };
+        combo_del {
             timeout-ms = <50>;
             key-positions = <17 16>;
             bindings = <&kp DEL>;
-        }
-        combo_del{
+        };
+        combo_del2 {
             timeout-ms = <50>;
             key-positions = <19 29>;
             bindings = <&kp DEL>;
-        }
+        };
 
-
-        combo_tab{
+        combo_tab {
             timeout-ms = <50>;
             key-positions = <13 14>;
             bindings = <&kp TAB>;
-        }
+        };
 
-        combo_lpar{
+        combo_lpar {
             timeout-ms = <50>;
             key-positions = <6 16>;
             bindings = <&kp LPAR>;
-        }
-        combo_rpar{
+        };
+        combo_rpar {
             timeout-ms = <50>;
             key-positions = <7 17>;
             bindings = <&kp RPAR>;
-        }
+        };
 
-        combo_lbkt{
+        combo_lbkt {
             timeout-ms = <50>;
             key-positions = <16 26>;
             bindings = <&kp LBKT>;
-        }
-        combo_rbkt{
+        };
+        combo_rbkt {
             timeout-ms = <50>;
             key-positions = <17 27>;
-            bindings = <&kp RB>;
-        }
+            bindings = <&kp RBKT>;
+        };
     }
 
     keymap {
@@ -108,7 +107,7 @@
             &kp DEL    &kp N4     &kp N5     &kp N6     &kp SEMI       &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT   &kp SEMI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ CAPS     │  1       │  2       │  3       │  '       │   │          │          │          │          │          │
-           &kp N0     &kp N1     &kp N2     &kp N3     &kp   SQT       &trans     &trans     &trans     &trans     &trans
+           &kp N0     &kp N1     &kp N2     &kp N3     &kp SQT       &trans     &trans     &trans     &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &kp ESC        &mo 2     &kp RSHFT
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -121,7 +120,7 @@
         //│          │          │          │          │          │   │   bt 1   │  bt 2    │  bt 3    │          │          │
             &kp F1     &kp F2     &kp F3     &kp F4      &trans      &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3  &kp RBKT  &bt BT_CLR
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │  prev    |  vol up  │ vol down │  next     play/pause 
+        //│          │          │          │          │          │   │  prev    │  vol up  │ vol down │  next     play/pause 
             &kp F5     &kp F6     &kp F7     &kp F8      &trans      &kp K_PREV  &kp K_VOL_UP &kp K_VOL_DN &kp K_NEXT   &kp K_PP
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │  &       │  _       │  +       │  │       │          │
