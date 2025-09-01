@@ -92,7 +92,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &lt 1 LGUI  &mo 1         &kp SPACE  &mt BSPC RCTRL
+                                            &lt 1 LGUI  &mo 1         &kp SPACE  &mt BSPC RSHFT
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -103,11 +103,11 @@
         //│ `        │  7       │  8       │  9       │          │   │ HOME     │ PAGE DN  │ PAGE UP  │ END      │  :       │
             &kp GRAVE  &kp N7     &kp N8     &kp N9     &trans         &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp COLON
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ DELETE   │  4       │  5       │  6       │  ;       │   │ LEFT     │ DOWN     │ UP       │ RIGHT    │  ;       │
-            &kp DEL    &kp N4     &kp N5     &kp N6     &kp SEMI       &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT   &kp SEMI
+        //│ DELETE   │  4       │  5       │  6       │  '       │   │ LEFT     │ DOWN     │ UP       │ RIGHT    │  \       │
+            &kp DEL    &kp N4     &kp N5     &kp N6     &kp SQT       &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT   &kp BSLH
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ CAPS     │  1       │  2       │  3       │  '       │   │          │          │          │          │          │
-           &kp N0     &kp N1     &kp N2     &kp N3     &kp SQT       &trans     &trans     &trans     &trans     &trans
+        //│ CAPS     │  1       │  2       │  3       │  ;       │   │   :      │          │          │          │          │
+           &kp N0     &kp N1     &kp N2     &kp N3     &kp SEMI       &kp COLON     &trans     &trans     &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &kp ESC        &mo 2     &kp RSHFT
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
