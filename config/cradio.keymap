@@ -90,9 +90,9 @@
             HRML(A,        S,         D,         F)     &kp G          &kp H      HRMR(J,        K,         L,        ENTER)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │          │
-            &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp RCTRL
+            &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp SLASH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &lt 1 LGUI  &mo 1         &kp SPACE  &mt BSPC RSHFT
+                                            &lt 1 LGUI  &mo 1         &kp SPACE  &mt RSHFT BSPC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -100,16 +100,16 @@
         one_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ INSERT   │  7       │  8       │  9       │          │   │ HOME     │ PAGE DN  │ PAGE UP  │ END      │  \       │
-            &kp INS    &kp N1     &kp N2     &kp N3     &trans         &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp BSLH
+        //│          │  7       │  8       │  9       │          │   │ HOME     │ PAGE DN  │ PAGE UP  │ END      │  \       │
+            &kp GRAVE    &kp N1     &kp N2     &kp N3     &trans         &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp BSLH
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ DELETE   │  4       │  5       │  6       │  '       │   │ LEFT     │ DOWN     │ UP       │ RIGHT    │  \       │
             &kp DEL    &kp N4     &kp N5     &kp N6     &kp SQT       &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT   &kp BSLH
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ CAPS     │  1       │  2       │  3       │  ;       │   │   :      │          │          │          │          │
-           &kp N0     &kp N1     &kp N2     &kp N3     &kp SEMI       &kp COLON     &trans     &trans     &trans     &trans
+        //│ 0     │  1       │  2       │  3       │  ;       │   │   :      │          │          │          │          │
+           &kp N0     &kp N1     &kp N2     &kp N3     &kp SEMI       &kp COLON   &kp MINUS &kp UNDER   &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &kp LSHFT     &kp ESC        &mo 2     &trans
+                                             &kp LSHFT     &kp ESC        &mo 2    &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -121,7 +121,7 @@
            &kp F1     &kp F2     &kp F3     &kp F4      &bt BT_SEL 0 &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans    &bt BT_CLR
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│BOOTLOADER│          │          │          │          │   │          │          │          │          │BOOTLOADER│
-          &kp F5     &kp F6     &kp F7     &kp F8      &bt BT_SEL 1    &trans     &trans     &trans     &trans    &kp F11
+          &kp F5     &kp F6     &kp F7     &kp F8      &bt BT_SEL 1    &kp C     &trans     &trans     &trans    &kp F1
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
             &kp F9     &kp F10    &kp F11    &kp F12   &bt BT_SEL 2    &trans     &trans     &trans     &trans     &trans
