@@ -100,14 +100,11 @@
         one_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │  7       │  8       │  9       │          │   │ HOME     │ PAGE DN  │ PAGE UP  │ END      │  \       │
-            &kp GRAVE    &kp N1     &kp N2     &kp N3     &trans         &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp BSLH
+            &kp N1     &kp N2     &kp N3     &kp N4     &kp N5           &kp N6     &kp N7     &kp N8     &kp N9     &kp N0
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ DELETE   │  4       │  5       │  6       │  '       │   │ LEFT     │ DOWN     │ UP       │ RIGHT    │  \       │
-            &kp DEL    &kp N4     &kp N5     &kp N6     &kp SQT       &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT   &kp BSLH
+            &kp DEL    &kp HOME   &kp MINUS  &kp EQUAL  &kp END       &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT   &kp BSLH
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ 0     │  1       │  2       │  3       │  ;       │   │   :      │          │          │          │          │
-           &kp N0     &kp N1     &kp N2     &kp N3     &kp SEMI       &kp COLON   &kp MINUS &kp UNDER   &trans     &trans
+           &kp GRAVE  &kp LBRC    &kp LBKT   &kp SQT    &kp SEMI       &kp COLON  &kp SLASH  &kp RBKT   &kp RBRC    &kp BSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &kp LSHFT     &kp ESC        &mo 2    &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
