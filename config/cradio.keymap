@@ -8,6 +8,7 @@
 // Home row mods macro
 #define HRML(k1,k2,k3) &ht LALT k1  &ht LCTRL k2  &ht LGUI k3
 #define HRMR(k1,k2,k3) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3
+#define COMBO=60
 
 / {
     behaviors {
@@ -34,53 +35,71 @@
         compatible = "zmk,combos";
 
         combo_bs {
-            timeout-ms = <50>;
-            key-positions = <15 16>;
+            timeout-ms = <COMBO>;
+            key-positions = <17 18>;
             bindings = <&kp BSPC>;
         };
         combo_bs_word{
-            timeout-ms = <50>;
+            timeout-ms = <COMBO>;
             key-positions = <18 16 17>;
             bindings = <&kp LA(BSPC)>;
         };
-        combo_del {
-            timeout-ms = <50>;
+        combo_bspc {
+            timeout-ms = <COMBO>;
             key-positions = <17 16>;
-            bindings = <&kp DEL>;
+            bindings = <&kp BSPC>;
         };
         combo_esc {
-            timeout-ms = <50>;
+            timeout-ms = <COMBO>;
             key-positions = <9 19>;
             bindings = <&kp ESC>;
         };
 
         combo_tab {
-            timeout-ms = <50>;
+            timeout-ms = <COMBO>;
             key-positions = <13 14>;
             bindings = <&kp TAB>;
         };
 
         combo_lpar {
-            timeout-ms = <50>;
+            timeout-ms = <COMBO>;
             key-positions = <6 16>;
             bindings = <&kp LPAR>;
         };
         combo_rpar {
-            timeout-ms = <50>;
+            timeout-ms = <COMBO>;
             key-positions = <7 17>;
             bindings = <&kp RPAR>;
         };
 
         combo_lbkt {
-            timeout-ms = <50>;
+            timeout-ms = <COMBO>;
             key-positions = <16 26>;
             bindings = <&kp LBKT>;
         };
         combo_rbkt {
-            timeout-ms = <50>;
+            timeout-ms = <COMBO>;
             key-positions = <17 27>;
             bindings = <&kp RBKT>;
         };
+        
+        // Alphas
+        combo_z {
+            timeout-ms = <COMBO>;
+            key-positions = <10 20>;
+            bindings = <&kp Z>;
+        };
+        combo_b {
+            timeout-ms = <COMBO>;
+            key-positions = <14 24>;
+            bindings = <&kp B>;
+        };
+        combo_m {
+            timeout-ms = <COMBO>;
+            key-positions = <15 25>;
+            bindings = <&kp M>;
+        };
+
     };
     
     keymap {
@@ -92,10 +111,10 @@
             &kp Q      &kp W      &kp E      &kp R      &kp T          &kp Y      &kp U      &kp I      &kp O      &kp P
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │          │
-            &kp A        &kp S       &kp D       &kp F     &kp G          &kp H     &kp J      &kp  K        &kp L &kp ENTER
+            &kp Q        &kp S       &kp D       &kp F     &kp G          &kp H     &kp J      &kp  K        &kp L &kp P
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │          │
-            &kp Z     HRML( X,       C,       V)      &kp B          &kp N     HRMR( M,      COMMA,   DOT)      &kp SLASH
+        //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  N       │ , <      │ . >      │          │
+            &kp A     HRML( X,       C,       V)      &kp B          &kp N     HRMR( N,      COMMA,   DOT)      &kp ENTER
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                             &kp LGUI  &mo 1         &kp SPACE  &mt RSHFT ESC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
