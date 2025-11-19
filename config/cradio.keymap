@@ -63,7 +63,7 @@
 
         combo_lpar {
             timeout-ms = <COMBO>;
-            key-positions = <6 16>;
+            key-positions = <2 12>;
             bindings = <&kp LPAR>;
         };
         combo_rpar {
@@ -74,7 +74,7 @@
 
         combo_lbkt {
             timeout-ms = <COMBO>;
-            key-positions = <16 26>;
+            key-positions = <12 22>;
             bindings = <&kp LBKT>;
         };
         combo_rbkt {
