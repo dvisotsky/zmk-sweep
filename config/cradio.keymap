@@ -44,7 +44,7 @@
             key-positions = <18 16 17>;
             bindings = <&kp LA(BSPC)>;
         };
-        combo_bs
+        combo_bs{
             timeout-ms = <COMBO>;
             key-positions = <17 16>;
             bindings = <&kp BSPC>;
